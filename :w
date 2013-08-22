@@ -1,0 +1,96 @@
+<head>
+	<script language="JavaScript">
+
+		function getCookie(NameOfCookie){
+		if (document.cookie.length > 0) {              
+		begin = document.cookie.indexOf(NameOfCookie+"=");       
+		if (begin != -1) {           
+		begin += NameOfCookie.length+1;       
+		end = document.cookie.indexOf(";", begin);
+		if (end == -1) end = document.cookie.length;
+		return unescape(document.cookie.substring(begin, end));
+		} 
+		}
+		return null;
+		}
+
+		function setCookie(NameOfCookie, value, expiredays) {
+		var ExpireDate = new Date ();
+		ExpireDate.setTime(ExpireDate.getTime() + (expiredays * 24 * 3600 * 1000));
+
+		document.cookie = NameOfCookie + "=" + escape(value) + 
+		((expiredays == null) ? "" : "; expires=" + ExpireDate.toGMTString());
+		}
+
+		function delCookie (NameOfCookie) {
+		if (getCookie(NameOfCookie)) {
+		document.cookie = NameOfCookie + "=" +
+		"; expires=Thu, 01-Jan-70 00:00:01 GMT";
+		}
+		}
+
+		function DoTheCookieStuff()
+		{
+		username=getCookie('username');
+		if (username!=null) {alert('Hi there '+username+' - Good to see you again!')}
+		else {username=prompt('Hi - this is your first visit to my page - please enter your name.',"");setCookie('username',username,365)}
+		}
+
+	</script>
+
+<p><title>Jason</title></p>
+
+<p><meta name="apple-mobile-web-app-status-bar-style" content="black" /></p>
+
+<p><link rel="apple-touch-startup-image" href="public/apple-touch-startup-image.png"></p>
+
+<p><link rel="apple-touch-icon" href="public/apple-touch-icon.png"></p>
+
+<p><meta name="apple-mobile-web-app-capable" content="yes" /></p>
+
+<p><link rel="stylesheet" href="style/style.css"></p>
+
+<script type="text/javascript" language="javascript">
+    function toggleMe(id)
+{
+    var element = document.getElementById(id);
+    if(element.style.display == "none")
+    {
+        element.style.display = "block";
+    }
+    else
+    {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+</head>
+	<body onload="DoTheCookieStuff()">
+
+<div>
+<h1 id="filler"> I'm working </h1>
+<h2> I'm working nights next on</h2>
+
+</div>
+
+
+<h1>Saturday, 01-26</h1>
+
+<p><input type="image" src="public/moon.png" width="115%" onClick="toggleMe('togglecal');" value="Toggle Calendar"/></p>
+
+
+
+
+<div id="togglecal" style="display:none;">
+
+<div background-color="grey" align="center"><iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23cccccc&amp;src=e8c2av1siq0qge2t78uer7svek%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=America%2FNew_York" style=" border:solid 1px #777 "></iframe></div>
+ 
+</div>
+
+
+
+
+<div><h2>tap image</h2></div>
+</body>

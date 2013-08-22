@@ -1,0 +1,115 @@
+<html/>
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.countdown.js"></script>
+<script type="text/javascript">
+$(function () {
+	var austDay = new Date();
+	austDay = new Date(2013, 08 -1, 16, 04, 00);
+	$('#defaultCountdown').countdown({until: austDay});
+	$('#year').text(austDay.getFullYear());
+});
+</script>
+
+	<script language="JavaScript">
+		function getCookie(NameOfCookie){
+		if (document.cookie.length > 0) {              
+		begin = document.cookie.indexOf(NameOfCookie+"=");       
+		if (begin != -1) {           
+		begin += NameOfCookie.length+1;       
+		end = document.cookie.indexOf(";", begin);
+		if (end == -1) end = document.cookie.length;
+		return unescape(document.cookie.substring(begin, end));
+		} 
+		}
+		return null;
+		}
+
+		function setCookie(NameOfCookie, value, expiredays) {
+		var ExpireDate = new Date ();
+		ExpireDate.setTime(ExpireDate.getTime() + (expiredays * 24 * 3600 * 1000));
+
+		document.cookie = NameOfCookie + "=" + escape(value) + 
+		((expiredays == null) ? "" : "; expires=" + ExpireDate.toGMTString());
+		}
+
+		function delCookie (NameOfCookie) {
+		if (getCookie(NameOfCookie)) {
+		document.cookie = NameOfCookie + "=" +
+		"; expires=Thu, 01-Jan-70 00:00:01 GMT";
+		}
+		}
+
+		function DoTheCookieStuff()
+		{
+		username=getCookie('username');
+		if (username!=null) 
+		{document.getElementById("username").innerHTML=username}
+		else{document.getElementById("username").innerHTML="My friend";username=prompt("Whats Your Name?");setCookie('username',username,365)}
+		}
+
+	</script>
+
+<p><title>Jason</title></p>
+
+<p><meta name="apple-mobile-web-app-status-bar-style" content="black" /></p>
+
+<p><link rel="apple-touch-startup-image" href="public/apple-touch-startup-image.png"></p>
+
+<p><link rel="apple-touch-icon" href="public/apple-touch-icon.png"></p>
+
+<p><meta name="apple-mobile-web-app-capable" content="yes" /></p>
+
+<p><link rel="stylesheet" href="style/style.css"></p>
+
+<script type="text/javascript" language="javascript">
+
+	function toggleMe(id)
+	{
+	var element = document.getElementById(id);
+	if(element.style.display == "none")
+	{
+        element.style.display = "block";
+	document.getElementById("cal").innerHTML='<ul><li><span style="color:#FFBF00">days</span> on Friday, Aug 16<li/><li><span style="color:#FFBF00">days</span> on Saturday, Aug 17<li/><li><span style="color:#FFBF00">days</span> on Sunday, Aug 18<li/><li><span style="color:#084B8A">nights</span> on Tuesday, Aug 20<li/><li><span style="color:#084B8A">nights</span> on Wednesday, Aug 21<li/><li><span style="color:#084B8A">nights</span> on Thursday, Aug 22<li/></ul>'
+	document.getElementById( 'cal' ).scrollIntoView();
+    }
+    else
+    {
+        element.style.display = "none";
+	scroll(0,0)
+	$('html, body').animate({ scrollTop: 0 }, 'fast');
+    }
+}
+</script>
+
+<style type="text/css">
+@import "jquery.countdown.css";
+
+#defaultCountdown { margin: 0 auto; width: 100%;color:white;font-size:280%; background-color:grey;border:0;text-align: center; }
+</style>
+</head>
+	<body onload="DoTheCookieStuff()">
+
+<div background-color="black">
+	<h1 id="filler"> <b id="username"></b>, I'm sleeping<br />
+		I work <span style="color:#FFBF00">days</span> on:</h1>
+
+</div>
+
+<h1>Friday, 08-16</h1>
+
+<div id="count"><div id='defaultCountdown'></div></div>
+<img id="pi" src="public/sleeping.png">
+<div id="pit"><input id="picc" type="button" color="white" width="215%" onClick="toggleMe('togglecal');" value="Toggle Calendar"></div>
+
+
+
+
+<div id="togglecal" style="display:none;">
+
+	<div id="cal" color="black" background-color="grey" align="center"><p>click image</p></div>
+ 
+</div>
+
+</body>
+</html>
