@@ -1,0 +1,116 @@
+
+<!-- saved from url=(0054)file://localhost/Users/j/Dropbox/Public/site/site.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<script type="text/javascript" src="./404_files/jquery.min.js"></script>
+<script type="text/javascript" src="./404_files/jquery.countdown.js"></script>
+<script type="text/javascript">
+$(function () {
+	var austDay = new Date();
+	austDay = new Date();
+	$('#defaultCountdown').countdown({until: austDay});
+	$('#year').text(austDay.getFullYear());
+});
+</script>
+
+	<script language="JavaScript">
+		function getCookie(NameOfCookie){
+		if (document.cookie.length > 0) {              
+		begin = document.cookie.indexOf(NameOfCookie+"=");       
+		if (begin != -1) {           
+		begin += NameOfCookie.length+1;       
+		end = document.cookie.indexOf(";", begin);
+		if (end == -1) end = document.cookie.length;
+		return unescape(document.cookie.substring(begin, end));
+		} 
+		}
+		return null;
+		}
+
+		function setCookie(NameOfCookie, value, expiredays) {
+		var ExpireDate = new Date ();
+		ExpireDate.setTime(ExpireDate.getTime() + (expiredays * 24 * 3600 * 1000));
+
+		document.cookie = NameOfCookie + "=" + escape(value) + 
+		((expiredays == null) ? "" : "; expires=" + ExpireDate.toGMTString());
+		}
+
+		function delCookie (NameOfCookie) {
+		if (getCookie(NameOfCookie)) {
+		document.cookie = NameOfCookie + "=" +
+		"; expires=Thu, 01-Jan-70 00:00:01 GMT";
+		}
+		}
+
+		function DoTheCookieStuff()
+		{
+		username=getCookie('username');
+		if (username!=null) 
+		{document.getElementById("username").innerHTML=username}
+		else{document.getElementById("username").innerHTML="My friend";username=prompt("Whats Your Name?");setCookie('username',username,365)}
+		}
+
+	</script>
+
+</head><body onload="DoTheCookieStuff()"><p><title>Jason</title></p>
+
+<p><meta name="apple-mobile-web-app-status-bar-style" content="black"></p>
+
+<p><link rel="apple-touch-startup-image" href="file://localhost/Users/j/Dropbox/Public/site/public/apple-touch-startup-image.png"></p>
+
+<p><link rel="apple-touch-icon" href="file://localhost/Users/j/Dropbox/Public/site/public/apple-touch-icon.png"></p>
+
+<p><meta name="apple-mobile-web-app-capable" content="yes"></p>
+
+<p><link rel="stylesheet" href="file://localhost/Users/j/Dropbox/Public/site/style/style.css"></p>
+
+<script type="text/javascript" language="javascript">
+
+	function toggleMe(id)
+	{
+	var element = document.getElementById(id);
+	if(element.style.display == "none")
+	{
+        element.style.display = "block";
+	document.getElementById("cal").innerHTML='<ul><li><span style="color:#FFBF00">days</span> on Monday, Aug 26<li/><li><span style="color:#FFBF00">days</span> on Tuesday, Aug 27<li/><li><span style="color:#FFBF00">days</span> on Wednesday, Aug 28<li/><li><span style="color:#FFBF00">days</span> on Thursday, Aug 29<li/><li><span style="color:#084B8A">nights</span> on Friday, Sep 06<li/><li><span style="color:#084B8A">nights</span> on Saturday, Sep 07<li/></ul>'
+	document.getElementById( 'cal' ).scrollIntoView();
+    }
+    else
+    {
+        element.style.display = "none";
+	scroll(0,0)
+	$('html, body').animate({ scrollTop: 0 }, 'fast');
+    }
+}
+</script>
+
+<style type="text/css">
+@import "jquery.countdown.css";
+
+#defaultCountdown { margin: 0 auto; width: 100%;color:white;font-size:280%; background-color:grey;border:0;text-align: center; }
+</style>
+
+	
+
+<div background-color="black">
+
+</div>
+
+<h1>WTF? somethings wrong</h1>
+<h2 color="blue">
+<a href="http://capybara.github.io/Page/"> click</a></h2><a href="http://capybara.github.io/Page/">
+
+<div id="count"></div>
+<img id="pi" src="./404_files/break.png">
+
+
+
+
+<div id="togglecal" style="display:none;">
+
+	<div id="cal" color="black" background-color="grey" align="center"><p>click image</p></div>
+ 
+</div>
+
+
+
+</a></body></html>
