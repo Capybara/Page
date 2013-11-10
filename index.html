@@ -5,7 +5,7 @@
 <script type="text/javascript">
 $(function () {
 	var austDay = new Date();
-	austDay = new Date(2013, 11 -1, 10, 18, 00);
+	austDay = new Date();
 	$('#defaultCountdown').countdown({until: austDay});
 	$('#year').text(austDay.getFullYear());
 });
@@ -70,7 +70,7 @@ $(function () {
 	if(element.style.display == "none")
 	{
         element.style.display = "block";
-	document.getElementById("cal").innerHTML='<ul><li><span style="color:#FFBF00">days</span> on Sunday, Nov 10<li/><li><span style="color:#084B8A">nights</span> on Tuesday, Nov 12<li/><li><span style="color:#084B8A">nights</span> on Wednesday, Nov 13<li/><li><span style="color:#084B8A">nights</span> on Thursday, Nov 14<li/><li><span style="color:#FFBF00">days</span> on Monday, Nov 18<li/><li><span style="color:#FFBF00">days</span> on Tuesday, Nov 19<li/></ul>'
+	document.getElementById("cal").innerHTML='<ul><li><span style="color:#084B8A">nights</span> on Tuesday, Nov 12<li/><li><span style="color:#084B8A">nights</span> on Wednesday, Nov 13<li/><li><span style="color:#084B8A">nights</span> on Thursday, Nov 14<li/><li><span style="color:#FFBF00">days</span> on Monday, Nov 18<li/><li><span style="color:#FFBF00">days</span> on Tuesday, Nov 19<li/><li><span style="color:#FFBF00">days</span> on Wednesday, Nov 20<li/></ul>'
 	document.getElementById( 'cal' ).scrollIntoView();
     }
     else
@@ -91,15 +91,15 @@ $(function () {
 	<body onload="DoTheCookieStuff()">
 
 <div background-color="black">
-	<h1 id="filler"> <b id="username"></b>, I'm working<br />
-		I work <span style="color:#FFBF00">days</span> on:</h1>
+	<h1 id="filler"> <b id="username"></b>, I'm not working<br />
+		I work <span style="color:#084B8A">nights</span> on:</h1>
 
 </div>
 
-<h1>Sunday, 11-10</h1>
+<h1>Tuesday, 11-12</h1>
 
-<div id="count"><div id='defaultCountdown'></div></div>
-<img id="pi" src="public/sun.png">
+<div id="count"></div>
+<img id="pi" src="public/break.png">
 <div id="pit"><input id="picc" type="button" color="white" width="215%" onClick="toggleMe('togglecal');" value="Toggle Calendar"></div>
 
 
