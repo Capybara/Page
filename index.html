@@ -5,7 +5,7 @@
 <script type="text/javascript">
 $(function () {
 	var austDay = new Date();
-	austDay = new Date();
+	austDay = new Date(2014, 03 -1, 01, 04, 00);
 	$('#defaultCountdown').countdown({until: austDay});
 	$('#year').text(austDay.getFullYear());
 });
@@ -91,15 +91,15 @@ $(function () {
 	<body onload="DoTheCookieStuff()">
 
 <div background-color="black">
-	<h1 id="filler"> <b id="username"></b>, I'm not working<br />
+	<h1 id="filler"> <b id="username"></b>, I'm sleeping<br />
 		I work <span style="color:#FFBF00">days</span> on:</h1>
 
 </div>
 
 <h1>Saturday, 03-01</h1>
 
-<div id="count"></div>
-<img id="pi" src="public/break.png">
+<div id="count"><div id='defaultCountdown'></div></div>
+<img id="pi" src="public/sleeping.png">
 <div id="pit"><input id="picc" type="button" color="white" width="215%" onClick="toggleMe('togglecal');" value="Toggle Calendar"></div>
 
 
