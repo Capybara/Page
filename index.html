@@ -5,7 +5,7 @@
 <script type="text/javascript">
 $(function () {
 	var austDay = new Date();
-	austDay = new Date(2014, 03 -1, 24, 06, 00);
+	austDay = new Date();
 	$('#defaultCountdown').countdown({until: austDay});
 	$('#year').text(austDay.getFullYear());
 });
@@ -70,7 +70,7 @@ $(function () {
 	if(element.style.display == "none")
 	{
         element.style.display = "block";
-	document.getElementById("cal").innerHTML='<ul><li><span style="color:#084B8A">nights</span> on Sunday, Mar 23<li/><li><span style="color:#084B8A">nights</span> on Monday, Mar 24<li/><li><span style="color:#FFBF00">days</span> on Friday, Mar 28<li/><li><span style="color:#FFBF00">days</span> on Saturday, Mar 29<li/><li><span style="color:#FFBF00">days</span> on Sunday, Mar 30<li/><li><span style="color:#084B8A">nights</span> on Tuesday, Apr 01<li/></ul>'
+	document.getElementById("cal").innerHTML='<ul><li><span style="color:#084B8A">nights</span> on Monday, Mar 24<li/><li><span style="color:#FFBF00">days</span> on Friday, Mar 28<li/><li><span style="color:#FFBF00">days</span> on Saturday, Mar 29<li/><li><span style="color:#FFBF00">days</span> on Sunday, Mar 30<li/><li><span style="color:#084B8A">nights</span> on Tuesday, Apr 01<li/><li><span style="color:#084B8A">nights</span> on Wednesday, Apr 02<li/></ul>'
 	document.getElementById( 'cal' ).scrollIntoView();
     }
     else
@@ -91,15 +91,15 @@ $(function () {
 	<body onload="DoTheCookieStuff()">
 
 <div background-color="black">
-	<h1 id="filler"> <b id="username"></b>, I'm working<br />
+	<h1 id="filler"> <b id="username"></b>, I'm not working<br />
 		I work <span style="color:#084B8A">nights</span> on:</h1>
 
 </div>
 
-<h1>Sunday, 03-23</h1>
+<h1>Monday, 03-24</h1>
 
-<div id="count"><div id='defaultCountdown'></div></div>
-<img id="pi" src="public/moon.png">
+<div id="count"></div>
+<img id="pi" src="public/break.png">
 <div id="pit"><input id="picc" type="button" color="white" width="215%" onClick="toggleMe('togglecal');" value="Toggle Calendar"></div>
 
 
