@@ -1,6 +1,13 @@
-<html/>
+<!DOCTYPE html>
+<html>
 <head>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<title>Am I Working?</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+<script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
 <script type="text/javascript" src="jquery.countdown.js"></script>
 <script type="text/javascript">
 $(function () {
@@ -63,6 +70,9 @@ $(function () {
 <p><link rel="stylesheet" href="style/style.css"></p>
 
 <script type="text/javascript" language="javascript">
+document.ontouchmove = function(event){
+	    event.preventDefault();
+}
 
 	function toggleMe(id)
 	{
@@ -85,31 +95,45 @@ $(function () {
 <style type="text/css">
 @import "jquery.countdown.css";
 
-#defaultCountdown { margin: 0 auto; width: 100%;color:white;font-size:280%; background-color:grey;border:0;text-align: center; }
+#defaultCountdown { margin: 0 auto; width: 100%;color:white;font-size:100%; background-color:grey;border:0;text-align: center; }
 </style>
 </head>
 	<body onload="DoTheCookieStuff()">
 
+<!-- Start of first page -->
+<div data-role="page" id="foo" style="background-color: rgba(164, 189, 230, 0.18);">
+
+	<div data-role="header">
+		<h1><b id="username"></b></h1>
+	</div><!-- /header -->
+
+	<div style="text-align: center"role="main" class="ui-content">
 <div background-color="black">
-	<h1 id="filler"> <b id="username"></b>, I'm not working<br />
-		I work <span style="color:#084B8A">nights</span> on:</h1>
-
+	<h2>I'm not working,</br> I work <span style="color:#084B8A">nights</span></h2>
+	<h2>Sunday, 08-31</h2>
 </div>
-
-<h1>Sunday, 08-31</h1>
 
 <div id="count"></div>
-<img id="pi" src="public/break.png">
-<div id="pit"><input id="picc" type="button" color="white" width="215%" onClick="toggleMe('togglecal');" value="Toggle Calendar"></div>
+<img style="width: 75%" id="pi" src="public/break.png">
 
+</div> 
+<p><a href="#bar" class="ui-btn" data-rel="dialog">Schedule</a></p>
+</div>
+<!-- /page -->
 
+<!-- Start of second page -->
+<div data-role="page" id="bar" style="background-color: rgba(164, 189, 230, 0.18);">
 
+	<div data-role="header">
+		<h1>Schedule</h1>
+	</div><!-- /header -->
 
-<div id="togglecal" style="display:none;">
-
-	<div id="cal" color="black" background-color="grey" align="center"><p>click image</p></div>
- 
+	<div role="main" class="ui-content">
+		<ul style="list-style: none;" ><li><span style="color:#084B8A">nights</span> on Sunday, Aug 31<li/><li><span style="color:#084B8A">nights</span> on Monday, Sep 01<li/><li><span style="color:#084B8A">nights</span> on Tuesday, Sep 02<li/><li><span style="color:#084B8A">nights</span> on Sunday, Sep 07<li/><li><span style="color:#084B8A">nights</span> on Monday, Sep 08<li/><li><span style="color:#084B8A">nights</span> on Tuesday, Sep 09<li/></ul>
+	</div>
 </div>
 
+<!-- /page -->
 </body>
 </html>
+
