@@ -13,7 +13,7 @@
 <script type="text/javascript">
 $(function () {
 	var austDay = new Date();
-	austDay = new Date();
+	austDay = new Date(2014, 09 -1, 02, 06, 00);
 	$('#defaultCountdown').countdown({until: austDay});
 	$('#year').text(austDay.getFullYear());
 });
@@ -109,12 +109,12 @@ document.ontouchmove = function(event){
 
 	<div style="text-align: center"role="main" class="ui-content">
 <div background-color="black">
-	<h2>I'm not working,</br> I work <span style="color:#084B8A">nights</span></h2>
+	<h2>I'm working,</br> I work <span style="color:#084B8A">nights</span></h2>
 	<h2>Monday, 09-01</h2>
 </div>
 
-<div id="count"></div>
-<img style="width: 75%" id="pi" src="public/break.png">
+<div id="count"><div id='defaultCountdown'></div></div>
+<img style="width: 75%; height: 75%" id="pi" src="public/moon.png">
 
 </div> 
 	<div data-role="footer">
