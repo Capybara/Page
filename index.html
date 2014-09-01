@@ -13,7 +13,7 @@
 <script type="text/javascript">
 $(function () {
 	var austDay = new Date();
-	austDay = new Date(2014, 09 -1, 01, 06, 00);
+	austDay = new Date();
 	$('#defaultCountdown').countdown({until: austDay});
 	$('#year').text(austDay.getFullYear());
 });
@@ -80,7 +80,7 @@ document.ontouchmove = function(event){
 	if(element.style.display == "none")
 	{
         element.style.display = "block";
-	document.getElementById("cal").innerHTML='<ul><li><span style="color:#084B8A">nights</span> on Sunday, Aug 31<li/><li><span style="color:#084B8A">nights</span> on Monday, Sep 01<li/><li><span style="color:#084B8A">nights</span> on Tuesday, Sep 02<li/><li><span style="color:#084B8A">nights</span> on Sunday, Sep 07<li/><li><span style="color:#084B8A">nights</span> on Monday, Sep 08<li/><li><span style="color:#084B8A">nights</span> on Tuesday, Sep 09<li/></ul>'
+	document.getElementById("cal").innerHTML='<ul><li><span style="color:#084B8A">nights</span> on Monday, Sep 01<li/><li><span style="color:#084B8A">nights</span> on Tuesday, Sep 02<li/><li><span style="color:#084B8A">nights</span> on Sunday, Sep 07<li/><li><span style="color:#084B8A">nights</span> on Monday, Sep 08<li/><li><span style="color:#084B8A">nights</span> on Tuesday, Sep 09<li/><li><span style="color:#084B8A">nights</span> on Wednesday, Sep 10<li/></ul>'
 	document.getElementById( 'cal' ).scrollIntoView();
     }
     else
@@ -109,12 +109,12 @@ document.ontouchmove = function(event){
 
 	<div style="text-align: center"role="main" class="ui-content">
 <div background-color="black">
-	<h2>I'm working,</br> I work <span style="color:#084B8A">nights</span></h2>
-	<h2>Sunday, 08-31</h2>
+	<h2>I'm not working,</br> I work <span style="color:#084B8A">nights</span></h2>
+	<h2>Monday, 09-01</h2>
 </div>
 
-<div id="count"><div id='defaultCountdown'></div></div>
-<img style="width: 75%" id="pi" src="public/moon.png">
+<div id="count"></div>
+<img style="width: 75%" id="pi" src="public/break.png">
 
 </div> 
 	<div data-role="footer">
@@ -131,7 +131,7 @@ document.ontouchmove = function(event){
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
-		<ul style="list-style: none;" ><li><span style="color:#084B8A">nights</span> on Sunday, Aug 31<li/><li><span style="color:#084B8A">nights</span> on Monday, Sep 01<li/><li><span style="color:#084B8A">nights</span> on Tuesday, Sep 02<li/><li><span style="color:#084B8A">nights</span> on Sunday, Sep 07<li/><li><span style="color:#084B8A">nights</span> on Monday, Sep 08<li/><li><span style="color:#084B8A">nights</span> on Tuesday, Sep 09<li/></ul>
+		<ul style="list-style: none;" ><li><span style="color:#084B8A">nights</span> on Monday, Sep 01<li/><li><span style="color:#084B8A">nights</span> on Tuesday, Sep 02<li/><li><span style="color:#084B8A">nights</span> on Sunday, Sep 07<li/><li><span style="color:#084B8A">nights</span> on Monday, Sep 08<li/><li><span style="color:#084B8A">nights</span> on Tuesday, Sep 09<li/><li><span style="color:#084B8A">nights</span> on Wednesday, Sep 10<li/></ul>
 	</div>
 </div> <!-- /page -->
 </body>
