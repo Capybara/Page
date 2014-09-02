@@ -64,23 +64,6 @@
 document.ontouchmove = function(event){
 	    event.preventDefault();
 }
-
-	function toggleMe(id)
-	{
-	var element = document.getElementById(id);
-	if(element.style.display == "none")
-	{
-        element.style.display = "block";
-	document.getElementById("cal").innerHTML='<ul><%= @list %></ul>'
-	document.getElementById( 'cal' ).scrollIntoView();
-    }
-    else
-    {
-        element.style.display = "none";
-	scroll(0,0)
-	$('html, body').animate({ scrollTop: 0 }, 'fast');
-    }
-}
 </script>
 
 </head>
@@ -97,12 +80,12 @@ document.ontouchmove = function(event){
 <div background-color="black">
 	<h2><%= status %>,</h2>
 	<div id="clock"> countdown </div>	
-	<h2>I work <%= @textColor %></br> <%= eventDate %></h2>
-</div>
 <script>$('#clock').countdown('<%= @endTime %>', function(event) {
 
   $(this).html(event.strftime('Only %H hrs %M mins left!'));
 });</script>
+	<h2>I work <%= @textColor %></br> <%= eventDate %></h2>
+</div>
 
 <div id="count"><%= @countdown %></div>
 <img style="width: 60%" id="pi" src="public/<%= @img %>">

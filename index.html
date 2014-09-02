@@ -64,23 +64,6 @@
 document.ontouchmove = function(event){
 	    event.preventDefault();
 }
-
-	function toggleMe(id)
-	{
-	var element = document.getElementById(id);
-	if(element.style.display == "none")
-	{
-        element.style.display = "block";
-	document.getElementById("cal").innerHTML='<ul><li><span style="color:#084B8A">nights</span> on Monday, Sep 01<li/><li><span style="color:#084B8A">nights</span> on Tuesday, Sep 02<li/><li><span style="color:#084B8A">nights</span> on Sunday, Sep 07<li/><li><span style="color:#084B8A">nights</span> on Monday, Sep 08<li/><li><span style="color:#084B8A">nights</span> on Tuesday, Sep 09<li/><li><span style="color:#084B8A">nights</span> on Wednesday, Sep 10<li/></ul>'
-	document.getElementById( 'cal' ).scrollIntoView();
-    }
-    else
-    {
-        element.style.display = "none";
-	scroll(0,0)
-	$('html, body').animate({ scrollTop: 0 }, 'fast');
-    }
-}
 </script>
 
 </head>
@@ -97,12 +80,12 @@ document.ontouchmove = function(event){
 <div background-color="black">
 	<h2>I'm working,</h2>
 	<div id="clock"> countdown </div>	
-	<h2>I work <span style="color:#084B8A">nights</span></br> Monday, 09-01</h2>
-</div>
 <script>$('#clock').countdown('2014, 09 -1, 02, 06, 00', function(event) {
 
   $(this).html(event.strftime('Only %H hrs %M mins left!'));
 });</script>
+	<h2>I work <span style="color:#084B8A">nights</span></br> Monday, 09-01</h2>
+</div>
 
 <div id="count"><div id='defaultCountdown'></div></div>
 <img style="width: 60%" id="pi" src="public/moon.png">
