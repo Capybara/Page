@@ -56,7 +56,11 @@
 <p><link rel="apple-touch-icon" href="public/apple-touch-icon.png"></p>
 
 <p><meta name="apple-mobile-web-app-capable" content="yes" /></p>
-
+<script type="text/javascript" language="javascript">
+document.ontouchmove = function(event){
+	    event.preventDefault();
+}
+</script>
 
 </head>
 	<body onload="DoTheCookieStuff()">
