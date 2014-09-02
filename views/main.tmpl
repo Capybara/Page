@@ -2,22 +2,13 @@
 <html>
 <head>
 	<title>Am I Working?</title>
-
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script type="text/javascript" src="jquery.countdown.js"></script>
 	<link rel="stylesheet" href="themes/good.min.css" />
 	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile.structure-1.4.3.min.css" />
-	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script><style type="text/css"></style>
 	<script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
-<script type="text/javascript">
-$(function () {
-	var austDay = new Date();
-	austDay = new Date(<%= @endTime %>);
-	$('#defaultCountdown').countdown({until: austDay});
-	$('#year').text(austDay.getFullYear());
-});
-</script>
+	<script src="jquery.countdown.min.js"></script>
 
 	<script language="JavaScript">
 		function getCookie(NameOfCookie){
@@ -92,11 +83,6 @@ document.ontouchmove = function(event){
 }
 </script>
 
-<style type="text/css">
-@import "jquery.countdown.css";
-
-#defaultCountdown { margin: 0 auto; width: 100%;color:white;font-size:100%; background-color:grey;border:0;text-align: center; }
-</style>
 </head>
 	<body onload="DoTheCookieStuff()">
 
@@ -109,9 +95,14 @@ document.ontouchmove = function(event){
 
 	<div style="text-align: center"role="main" class="ui-content">
 <div background-color="black">
-	<h2><%= status %>,</br> I work <%= @textColor %></h2>
-	<h2><%= eventDate %></h2>
+	<h2><%= status %>,</h2>
+	<div id="clock"> countdown </div>	
+	<h2>I work <%= @textColor %></br> <%= eventDate %></h2>
 </div>
+<script>$('#clock').countdown('<%= @endTime %>', function(event) {
+
+  $(this).html(event.strftime('Only %H hrs %M mins left!'));
+});</script>
 
 <div id="count"><%= @countdown %></div>
 <img style="width: 60%" id="pi" src="public/<%= @img %>">
