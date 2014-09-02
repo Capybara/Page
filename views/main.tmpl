@@ -75,7 +75,7 @@ document.ontouchmove = function(event){
 
 	<div style="text-align: center"role="main" class="ui-content">
 <div background-color="black">
-	<h2><%= status %>,</br> <div id="clock"> countdown </div></h2>	
+	<h1><%= status %>,</h1><h2><div style="color: green; font-weight: 400" id="clock"> countdown </div></h2>	
 <script>$('#clock').countdown('<%= @endTime %>', function(event) {
 
   $(this).html(event.strftime('Only %H hrs %M mins left!'));
@@ -83,7 +83,7 @@ document.ontouchmove = function(event){
 	<h2>I work <%= @textColor %></br> <%= eventDate %></h2>
 </div>
 
-<img style="width: 58%" id="pi" src="public/<%= @img %>">
+<img style="width: 56%" id="pi" src="public/<%= @img %>">
 
 </div> 
 	<div data-role="footer">
