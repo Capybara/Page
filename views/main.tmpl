@@ -70,8 +70,7 @@
 
 	<div style="text-align: center"role="main" class="ui-content">
 <div background-color="black">
-	<h2><%= status %>,</h2>
-	<div id="clock"> countdown </div>	
+	<h2><%= status %>,</br> <div id="clock"> countdown </div></h2>	
 <script>$('#clock').countdown('<%= @endTime %>', function(event) {
 
   $(this).html(event.strftime('Only %H hrs %M mins left!'));
