@@ -2,7 +2,7 @@
 <html class="ui-mobile"><head>
 	<title>Am I Working?</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="themes/good.min.css" />
+	<link rel="stylesheet" href="themes/status.min.css" />
 	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile.structure-1.4.3.min.css" />
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script><style type="text/css"></style>
@@ -47,8 +47,6 @@
 
 	</script>
 
-<p><title>Jason</title></p>
-
 <p><meta name="apple-mobile-web-app-status-bar-style" content="black" /></p>
 
 <p><link rel="apple-touch-startup-image" href="public/apple-touch-startup-image.png"></p>
@@ -67,7 +65,7 @@ document.ontouchmove = function(event){
 	<body onload="DoTheCookieStuff()">
 
 <!-- Start of first page -->
-<div data-role="page" data-theme="a" id="foo" style="background-color: rgba(164, 189, 230, 0.18);">
+<div data-role="page" data-theme="<%= @swatch %>" id="foo" style="background-color: rgba(164, 189, 230, 0.18);">
 
 	<div data-role="header">
 		<h1><b id="username"></b></h1>
@@ -85,10 +83,10 @@ document.ontouchmove = function(event){
 	<h2>I work <%= @textColor %></br> <%= eventDate %></h2>
 </div>
 
-<img style="width: 75%" id="pi" src="public/<%= @img %>">
+<img style="width: 55%" id="pi" src="public/<%= @img %>">
 
 </div> 
-	<div data-role="footer">
+	<div data-role="footer" data-position="fixed">
 		<div style="text-align: center" ><a href="#bar" class="ui-btn" data-rel="dialog">Schedule</a></div>
 	</div><!-- /footer -->
 </div>
