@@ -93,13 +93,13 @@ document.ontouchmove = function(event){
 <!-- /page -->
 
 <!-- Start of second page -->
-<div data-role="page" data-theme="<%= @swatch %>" id="bar" style="background-color: rgba(164, 189, 230, 0.18);">
+<div data-role="page" data-theme="<%= @swatch %>" id="bar"> 
 
 	<div data-role="header">
 		<h1>Schedule</h1>
 	</div><!-- /header -->
 
-	<div role="main" class="ui-content">
+	<div role="main" class="ui-content" data-theme="<%= @swatch %>">
 		<ul style="list-style: none;" ><%= @list %></ul>
 	</div>
 </div> <!-- /page -->
