@@ -65,7 +65,7 @@ document.ontouchmove = function(event){
 	<body onload="DoTheCookieStuff()">
 
 <!-- Start of first page -->
-<div data-role="page" data-theme="c" id="foo" style="background-color: rgba(164, 189, 230, 0.18);">
+<div data-role="page" data-theme="d" id="foo" style="background-color: rgba(164, 189, 230, 0.18);">
 
 	<div data-role="header">
 		<h1><b id="username"></b></h1>
@@ -73,17 +73,17 @@ document.ontouchmove = function(event){
 
 	<div style="text-align: center"role="main" class="ui-content">
 <div background-color="black">
-	<h1>I'm not working,</h1><h2>
-	<h2></h2>
+	<h1>I'm sleeping,</h1><h2>
+	<h2><div style='font-weight: 400' id='clock'>countdown </div></h2>
 
-<script>$('#clock').countdown('', function(event) {
+<script>$('#clock').countdown('2014/10/21 16:00:00', function(event) {
 
   $(this).html(event.strftime('Only %H hrs %M mins left!'));
 });</script>
 	<h2>I work <span style="color:#084B8A">nights</span></br> Tuesday, 10-21</h2>
 </div>
 
-<img style="width: 55%" id="pi" src="public/break.png">
+<img style="width: 55%" id="pi" src="public/sleeping.png">
 
 </div> 
 	<div data-role="footer" data-position="fixed">
@@ -93,13 +93,13 @@ document.ontouchmove = function(event){
 <!-- /page -->
 
 <!-- Start of second page -->
-<div data-role="page" data-theme="c" id="bar"> 
+<div data-role="page" data-theme="d" id="bar"> 
 
 	<div data-role="header">
 		<h1>Schedule</h1>
 	</div><!-- /header -->
 
-	<div role="main" class="ui-content" data-theme="c">
+	<div role="main" class="ui-content" data-theme="d">
 		<ul style="list-style: none;" ><li><span style="color:#084B8A">nights</span> on Tuesday, Oct 21<li/><li><span style="color:#084B8A">nights</span> on Wednesday, Oct 22<li/><li><span style="color:#084B8A">nights</span> on Sunday, Oct 26<li/><li><span style="color:#084B8A">nights</span> on Monday, Oct 27<li/><li><span style="color:#084B8A">nights</span> on Tuesday, Oct 28<li/><li><span style="color:#084B8A">nights</span> on Sunday, Nov 02<li/></ul>
 	</div>
 </div> <!-- /page -->
